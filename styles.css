@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-wrapper {
+    position: sticky; /* Đặt phần tử là cố định */
+    top: 0; /* Cố định ở vị trí trên cùng */
+    background-color: #fff; /* Nền màu trắng để tương phản với nội dung cuộn */
+    z-index: 1; /* Đảm bảo phần cố định hiển thị trên phần nội dung cuộn */
+  }
+  
+  .menu-content {
+    overflow: auto; /* Thêm thanh cuộn khi nội dung vượt quá kích thước */
+    max-height: 400px; /* Đặt chiều cao tối đa cho phần nội dung cuộn */
+  }
+
+  .menu {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 45%;
+    overflow: auto; /* Thêm thanh cuộn khi nội dung vượt quá kích thước */
+    max-height: 400px; /* Đặt chiều cao tối đa cho menu */
+    /* Các thuộc tính để căn chỉnh vị trí */
+    position: relative;
+    top: 50px; /* Điều chỉnh vị trí theo yếu tố thực tế */
+    left: 0px; /* Điều chỉnh vị trí theo yếu tố thực tế */
+
+    /* Các thuộc tính để bo tròn khung */
+    border-radius: 10px; /* Bo tròn góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+  }  
+
+  .cart {
+    /* Các thuộc tính để căn chỉnh vị trí */
+    position: relative;
+    top: 50px; /* Điều chỉnh vị trí theo yếu tố thực tế */
+    right: 0px; /* Điều chỉnh vị trí theo yếu tố thực tế */
+  
+    /* Các thuộc tính để bo tròn khung */
+    border-radius: 10px; /* Bo tròn góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+  }
+    .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px; /* Đặt chiều rộng tối đa cho phần container */
+    margin: 0 auto; /* Canh giữa container */
+        }
+
+    .menu, .cart {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 45%;
+    overflow: auto;
+    max-height: 400px;
+    }
+
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .buy-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Hiển thị dọc khi trình duyệt có kích thước nhỏ */
+    }
+    
+    .menu, .cart {
+      width: 100%; /* Điều chỉnh kích thước menu và giỏ hàng */
+      margin-bottom: 20px; /* Khoảng cách giữa menu và giỏ hàng */
+      max-height: none; /* Bỏ giới hạn chiều cao tối đa */
+      overflow: visible; /* Hiển thị toàn bộ nội dung mà không cần thanh cuộn */
+    }
+  }
+
+  .buy-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .buy-btn .buy-icon {
+    width: 20px; /* Điều chỉnh kích thước của icon */
+    height: 20px;
+    margin-right: 5px; /* Khoảng cách giữa icon và văn bản (nếu có) */
+  }
+  
+  
+  
